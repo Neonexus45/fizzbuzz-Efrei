@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-      
 
   pull_request:
     branches:
@@ -43,7 +42,7 @@ jobs:
 
             
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: htmlcov/
