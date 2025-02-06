@@ -1,9 +1,6 @@
-import sys
-import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
 import unittest
-from main import fizzbuzz  
+from main import fizzbuzz
+
 
 class TestFizzBuzz(unittest.TestCase):
 
@@ -13,7 +10,7 @@ class TestFizzBuzz(unittest.TestCase):
 
     def test_contient_3(self):
         self.assertEqual(fizzbuzz(100)[22], "Fizz")
-        self.assertEqual(fizzbuzz(100)[30], "Fizz") 
+        self.assertEqual(fizzbuzz(100)[30], "Fizz")
 
     def test_multiple_de_5(self):
         self.assertEqual(fizzbuzz(100)[9], "Buzz")
