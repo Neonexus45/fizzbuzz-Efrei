@@ -30,6 +30,8 @@ def main():
     main function to test fizzbuzz
     :return:
     """
+
+    #good pr !
     for i in range(1, 100):
         fizzbuzz(i)
 
