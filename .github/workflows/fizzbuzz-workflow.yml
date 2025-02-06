@@ -13,19 +13,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    steps:
-      
+    steps:   
       - name: Checkout Repository
         uses: actions/checkout@v3
-
       
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-
-            
+         
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -34,15 +30,24 @@ jobs:
       - name: Run the project
         run: |
           python main.py
-
-            
+          
       - name: Run Tests and Coverage
         run: |
           pytest --cov=fizzbuzz --cov-report=term-missing tests/
-
-            
+       
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: htmlcov/
+
+  pr-validation:
+      needs: test  # Cette étape dépend du succès des tests
+      if: github.event_name == 'pull_request'
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Validate_PR
+          run: echo "Tests passed! PR can be merged."
+
+  
