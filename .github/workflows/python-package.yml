@@ -31,4 +31,4 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover tests  # Découverte automatique des tests
+          python -m unittest discover tests  
