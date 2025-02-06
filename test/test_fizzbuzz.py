@@ -1,23 +1,52 @@
-import unittest
-from io import StringIO
 import sys
-from main import fizzbuzz
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+import unittest
+from main import fizzbuzz  
 
 class TestFizzBuzz(unittest.TestCase):
-    def test_fizzbuzz(self):
-        captured_output = StringIO()
-        sys.stdout = captured_output
 
-        fizzbuzz(15)
+    def test_multiple_de_3(self):
+        self.assertEqual(fizzbuzz(100)[5], "Fizz")
+        self.assertEqual(fizzbuzz(100)[68], "Fizz")
 
-        sys.stdout = sys.stdout
-        output = captured_output.getvalue().splitlines()
+    def test_contient_3(self):
+        self.assertEqual(fizzbuzz(100)[22], "Fizz")
+        self.assertEqual(fizzbuzz(100)[30], "Fizz") 
 
-        expected_output = [
-            "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
-            "11", "Fizz", "13", "14", "FizzBuzz"
-        ]
-        self.assertEqual(output, expected_output)
+    def test_multiple_de_5(self):
+        self.assertEqual(fizzbuzz(100)[9], "Buzz")
+        self.assertEqual(fizzbuzz(100)[69], "Buzz")
+
+    def test_contient_5(self):
+        self.assertEqual(fizzbuzz(100)[51], "Buzz")
+        self.assertEqual(fizzbuzz(100)[55], "Buzz")
+
+    def test_multiple_de_3_et_5(self):
+        self.assertEqual(fizzbuzz(100)[50], "FizzBuzz")
+        self.assertEqual(fizzbuzz(100)[56], "FizzBuzz")
+
+    def test_non_multiple(self):
+        self.assertEqual(fizzbuzz(100)[0], "1")
+        self.assertEqual(fizzbuzz(100)[43], "44")
+        self.assertEqual(fizzbuzz(100)[70], "71")
+
+    def test_multiple_de_3_et_contient_3(self):
+        self.assertEqual(fizzbuzz(100)[32], "FizzFizz")
+        self.assertEqual(fizzbuzz(100)[38], "FizzFizz")
+
+    def test_multiple_de_5_et_contient_5(self):
+        self.assertEqual(fizzbuzz(100)[49], "BuzzBuzz")
+        self.assertEqual(fizzbuzz(100)[64], "BuzzBuzz")
+
+    def test_multiple_de_3_de_5_et_contient_3(self):
+        self.assertEqual(fizzbuzz(100)[29], "FizzFizzBuzz")
+
+    def test_multiple_de_3_de_5_et_contient_5(self):
+        self.assertEqual(fizzbuzz(100)[74], "FizzBuzzBuzz")
+        self.assertEqual(fizzbuzz(100)[44], "FizzBuzzBuzz")
+
 
 if __name__ == '__main__':
     unittest.main()
