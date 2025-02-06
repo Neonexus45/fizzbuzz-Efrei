@@ -9,8 +9,11 @@ def fizzbuzz(i):
     else:
         result = str(i)
 
+    # Si le nombre contient un 3, ajouter "Fizz"
     if "3" in str(i):
         result += "Fizz"
+    
+    # Si le nombre contient un 5, ajouter "Buzz"
     if "5" in str(i):
         result += "Buzz"
 
@@ -25,4 +28,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
