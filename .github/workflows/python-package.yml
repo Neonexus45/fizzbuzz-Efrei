@@ -2,28 +2,33 @@ name: Python Tests
 
 on:
   push:
-    branches: [ "main","Docker" ]
+    branches: [ "main", "tests-unitaires" ]  # Ajout de la branche tests-unitaires
   pull_request:
-    branches: [ "main","Docker" ]
+    branches: [ "main", "tests-unitaires" ]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: tests-unitaires  # S'assurer que la bonne branche est utilisée
+
+      - name: Debug - List files
+        run: ls -R  # Vérifier la présence de requirements.txt
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt  # Vérifie que ce fichier est bien à la racine
+          pip install -r requirements.txt
 
       - name: Run tests
         run: |
-          python -m unittest tests/tests.py  # Ou `pytest` si tu préfères
+          python -m unittest discover tests  # Découverte automatique des tests
