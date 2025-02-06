@@ -10,7 +10,7 @@ def fizzbuzz(n=100):
             output += "Buzz"
         if "5" in str(i):
             output += "Buzz"
-        results.append(output or i)
+        results.append(output or str(i))
     return results
 
 if __name__ == '__main__':

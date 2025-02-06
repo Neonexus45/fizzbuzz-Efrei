@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 import unittest
 from main import fizzbuzz  
 
@@ -24,9 +28,9 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(fizzbuzz(100)[56], "FizzBuzz")
 
     def test_non_multiple(self):
-        self.assertEqual(fizzbuzz(100)[0], 1)
-        self.assertEqual(fizzbuzz(100)[43], 44)
-        self.assertEqual(fizzbuzz(100)[70], 71)
+        self.assertEqual(fizzbuzz(100)[0], "1")
+        self.assertEqual(fizzbuzz(100)[43], "44")
+        self.assertEqual(fizzbuzz(100)[70], "71")
 
     def test_multiple_de_3_et_contient_3(self):
         self.assertEqual(fizzbuzz(100)[32], "FizzFizz")
