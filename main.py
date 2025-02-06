@@ -1,16 +1,15 @@
 
-def main():
-    print('Hello, World!')
-    for i in range(1, 100): 
+def fizzbuzz(i):
         if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz")
+            return("FizzBuzz")
         elif i % 3 == 0:
-            print("Fizz")
+            return("Fizz")
         elif i % 5 == 0:
-            print("Buzz")
+            return("Buzz")
         else:
-            print(i)
+            return(i)
 
 if __name__ == '__main__':
-    main()
+    start = 4
+    print(fizzbuzz(start))
 
