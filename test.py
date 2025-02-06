@@ -8,6 +8,6 @@ def test_fizzbuzz():
     assert fizzbuzz(31) == "31"
     assert fizzbuzz(60) == "FizzBuzz"
 
-    print("Tout les testes sont passez")
+    print("Tout les testes sont passez !")
 
 test_fizzbuzz()
