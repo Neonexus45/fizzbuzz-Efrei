@@ -3,4 +3,3 @@ WORKDIR /app
 COPY . /app
 RUN pip install pytest
 RUN pytest test.py
- 
