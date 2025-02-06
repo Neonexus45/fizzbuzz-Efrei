@@ -22,13 +22,10 @@ def fizzbuzz(i):
     print(result)
 
 def main():
-    """
-    main function to test fizzbuzz
-    :return:
-    """
 
-    #good pr
-    for i in range(1, 100):
+
+    #bad pr
+    for i in range(1, 100)
         fizzbuzz(i)
 
     fizzbuzz(53)
