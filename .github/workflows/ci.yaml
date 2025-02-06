@@ -1,8 +1,7 @@
-name: CI
+name: Test_fizzbuzz
 
 on:
   push:
-  pull_request:
 
 jobs:
   run-tests:
