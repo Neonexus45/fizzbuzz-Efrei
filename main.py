@@ -1,8 +1,9 @@
-
-def main():
-    print('Hello, World!')
-    return 0
-
-if __name__ == '__main__':
-    main()
-
+def fizzbuzz(num):
+    if num%3 == 0 and num % 5 == 0:
+        return "fizzbuzz"
+    elif num%3 == 0:
+        return "fizz"
+    elif num % 5 == 0:
+        return "buzz"
+    else:
+        return str(num)
