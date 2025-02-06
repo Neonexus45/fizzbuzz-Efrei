@@ -1,4 +1,4 @@
-# Test cases for fizzbuzz function
+""" Test cases for fizzbuzz function """
 
 import unittest
 from io import StringIO
