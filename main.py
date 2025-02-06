@@ -20,11 +20,10 @@ def fizzbuzz(n=100):
         if "5" in str(i):
             output += "Buzz"
         results.append(output or str(i))
-
     return results
 
 
 if __name__ == '__main__':
     for value in fizzbuzz():
         print(value)
-        
+
