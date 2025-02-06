@@ -28,11 +28,8 @@ def main():
     """
 
     #good pr !
-    for i in range(1, 100):
+    for i in range(1, 101):
         fizzbuzz(i)
-
-    fizzbuzz(53)
-    fizzbuzz(35)
 
 if __name__ == '__main__':
     main()
