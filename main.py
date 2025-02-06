@@ -27,7 +27,4 @@ def fizzbuzz(n=100):
 if __name__ == '__main__':
     for value in fizzbuzz():
         print(value)
-
-
-
-
+        
