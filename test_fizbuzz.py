@@ -1,7 +1,7 @@
 import unittest
 from io import StringIO
 import sys
-from fizzbuzz import fizzbuzz
+from main import fizzbuzz
 
 class TestFizzBuzz(unittest.TestCase):
     def test_fizzbuzz(self):
