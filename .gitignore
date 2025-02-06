@@ -4,47 +4,36 @@ pycache/
 *.pyo
 *.pyd
 
-📦 Exclure les environnements virtuels
 env/
 venv/
 
-📂 Exclure les fichiers de log et de debug
 *.log
 logs/
 debug.log
 
-📂 Exclure les rapports de couverture des tests
 htmlcov/
 .coverage
 *.cover
 .coverage.
 
-📂 Exclure les fichiers de test temporaires
 tests/pycache/
 tests/.pyc
 
-📂 Exclure les fichiers générés par GitHub Actions
 .github/workflows/.log
 
-📂 Exclure les fichiers de l'IDE (VS Code, PyCharm, etc.)
 .vscode/
 .idea/
 *.iml
 
-📂 Exclure les fichiers de Docker (si utilisé)
 .dockerignore
 docker-compose.override.yml
 
-📂 Exclure les dépendances installées par pip
 pip-log.txt
 pip-delete-this-directory.txt
 
-📂 Exclure les artefacts de pytest
 .pytest_cache/
 
-📂 Exclure les fichiers liés à Jupyter Notebook (si utilisé)
 .ipynb_checkpoints/
 
-📂 Exclure les fichiers de cache de macOS et Windows
 .DS_Store
 Thumbs.db
