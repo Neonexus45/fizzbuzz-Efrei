@@ -14,5 +14,5 @@ def fizzbuzz(n=100):
     return results
 
 if __name__ == '__main__':
-    for val in fizzbuzz():
-        print(val)
+    for value in fizzbuzz():
+        print(value)
