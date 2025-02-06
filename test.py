@@ -9,7 +9,5 @@ def test_fizzbuzz():
     assert fizzbuzz(15) == "FizzBuzz"
     assert fizzbuzz(31) == "31"
     assert fizzbuzz(60) == "FizzBuzz"
-    assert 9 == 4
-
 
 test_fizzbuzz()
