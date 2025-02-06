@@ -3,6 +3,7 @@ from io import StringIO
 import sys
 from main import fizzbuzz
 
+#Test unitaire
 class TestFizzBuzz(unittest.TestCase):
     def setUp(self):
         self.held, sys.stdout = sys.stdout, StringIO()

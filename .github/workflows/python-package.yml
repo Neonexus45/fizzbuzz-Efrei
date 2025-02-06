@@ -12,18 +12,18 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v2
         with:
           python-version: '3.9'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
+          pip install -r requirements.txt  # Vérifie que ce fichier est bien à la racine
 
       - name: Run tests
         run: |
-          python -m unittest .\tests\tests.py
-
+          python -m unittest tests/tests.py  # Ou `pytest` si tu préfères
