@@ -27,7 +27,7 @@ def main():
     :return:
     """
 
-    #good pr
+    #good pr !
     for i in range(1, 100):
         fizzbuzz(i)
 
