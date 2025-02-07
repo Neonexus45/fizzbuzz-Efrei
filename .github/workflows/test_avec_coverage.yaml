@@ -29,5 +29,5 @@ jobs:
       - name: Run tests with coverage
         run: coverage run -m pytest test.py
 
-      - name: Generate coverage report
+      - name: Affichage du coverage
         run: coverage report -m
