@@ -29,3 +29,11 @@ jobs:
 
       - name: Run tests
         run: pytest test.py
+
+        - name: Build Docker image
+        run: |
+          docker build -t fizzbuzz .
+
+      - name: Run Docker container
+        run: |
+          docker run --rm fizzbuzz
