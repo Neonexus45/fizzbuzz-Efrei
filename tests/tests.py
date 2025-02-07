@@ -7,6 +7,8 @@ from io import StringIO
 from main import fizzbuzz
 
 
+#Test unitaire
+
 class TestFizzBuzz(unittest.TestCase):
     """
     Test cases for fizzbuzz function
@@ -32,7 +34,7 @@ class TestFizzBuzz(unittest.TestCase):
         :return:
         """
         fizzbuzz(15)
-        self.assertEqual(sys.stdout.getvalue().strip(), "FizzBuzzBuzz")
+        self.assertEqual(sys.stdout.getvalue().strip(), "FizzBuzz")
 
     def test_fizzbuzz_divisible_by_3(self):
         """
@@ -73,7 +75,6 @@ class TestFizzBuzz(unittest.TestCase):
         """
         fizzbuzz(7)
         self.assertEqual(sys.stdout.getvalue().strip(), "7")
-
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,29 @@
+name: Python Tests
+
+on:
+  push:
+    branches: [ "main", "tests-unitaires" ]
+  pull_request:
+    branches: [ "main", "tests-unitaires" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: tests-unitaires  # S'assurer que la bonne branche est utilisée
+
+      - name: Debug - List files
+        run: ls -R  # Vérifier la présence de fichiers
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Run tests
+        run: |
+          python -m unittest discover tests  # Lancer les tests
