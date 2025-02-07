@@ -9,7 +9,7 @@ class TestFizzBuzz(unittest.TestCase):
         self.assertEqual(result[14], "FizzBuzz")
         self.assertEqual(result[2], "Fizz")
         self.assertEqual(result[4], "Buzz")
-        self.assertEqual(result[0], 5)
+        self.assertEqual(result[0], 1)
 
 if __name__ == '__main__':
     unittest.main()
