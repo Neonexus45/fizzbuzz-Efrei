@@ -1,11 +1,13 @@
-from fizzbuzz import fizzbuzz 
+import unittest
+from fizzbuzz import fizzbuzz
 
-def test_fizzbuzz():
-    assert fizzbuzz(1) == "1"
-    assert fizzbuzz(3) == "Fizz"
-    assert fizzbuzz(5) == "Buzz"
-    assert fizzbuzz(15) == "FizzBuzz"
-    assert fizzbuzz(31) == "31"
-    print("Tout les testes sont passez !")
+class TestFizzBuzz(unittest.TestCase):
+    def test_fizzbuzz(self):
+        self.assertEqual(fizzbuzz(1), "1")
+        self.assertEqual(fizzbuzz(3), "Fizz")
+        self.assertEqual(fizzbuzz(5), "Buzz")
+        self.assertEqual(fizzbuzz(15), "FizzBuzz")
+        self.assertEqual(fizzbuzz(31), "31")
 
-test_fizzbuzz()
+if __name__ == "__main__":
+    unittest.main()
