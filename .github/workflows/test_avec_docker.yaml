@@ -14,6 +14,4 @@ jobs:
 
       - name: Run tests in Docker
         run: |
-          docker run --rm -v ${{ github.workspace }}:/app -w /app devops bash -c "
-          pip install --no-cache-dir pytest &&
-          pytest test.py"
+          docker run --rm devops
