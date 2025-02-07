@@ -1,0 +1,19 @@
+name: Test_fizzbuzz
+
+on:
+  push:
+
+jobs:
+  run-tests:
+    name: Run Tests in Docker
+    runs-on: [windows-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  
+
+      - name: Run tests in Docker
+        run: |
+          docker run --rm -v ${{ github.workspace }}:/app -w /app python:3.13 bash -c "
+          pip install --no-cache-dir pytest && 
+          pytest test.py"
