@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - main
+    - feature/*
 
   pull_request:
     branches:
@@ -45,8 +46,11 @@ jobs:
       needs: test  # Cette étape dépend du succès des tests
       if: github.event_name == 'pull_request'
       runs-on: ubuntu-latest
-
       steps:
+        - name: Check Test status
+          if: needs.test.result != "success"
+          run: |
+            echo" Les tests ont échoué, la PR ne peut pas être fusionné"
         - name: Validate_PR
           run: echo "Tests passed! PR can be merged."
 
