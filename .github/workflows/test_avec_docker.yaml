@@ -6,7 +6,7 @@ on:
 jobs:
   run-tests:
     name: Run Tests in Docker
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -16,4 +16,4 @@ jobs:
         run: docker build -t devops .
 
       - name: Run tests in Docker
-        run: docker run --rm -v "${{ github.workspace }}:/app" devops
+        run: docker run devops
