@@ -1,4 +1,4 @@
-name: Test_fizzbuzz
+name: Test_fizzbuzz_docker
 
 on:
   push:
