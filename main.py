@@ -28,3 +28,7 @@ def fizzbuzz(i):
         result += "Buzz"
 
     print(result)
+
+# Tester les nombres de 1 à 100
+for i in range(1, 101):
+    fizzbuzz(i)
