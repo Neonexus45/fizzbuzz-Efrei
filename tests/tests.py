@@ -32,7 +32,7 @@ class TestFizzBuzz(unittest.TestCase):
         :return:
         """
         fizzbuzz(15)
-        self.assertEqual(sys.stdout.getvalue().strip(), "FizzBuzzBuzz")
+        self.assertEqual(sys.stdout.getvalue().strip(), "FizzBuzz")
 
     def test_fizzbuzz_divisible_by_3(self):
         """
