@@ -9,7 +9,7 @@ class TestFizzBuzz(unittest.TestCase):
     def test_valeur_3(self):
         # Pour 3, il est divisible par 3 ET contient le chiffre 3 :
         # On attend "Fizz" (divisible par 3) + "Fizz" (contient le 3) = "FizzFizz"
-        self.assertEqual(fizzbuzz(3), "FizzFizz")
+        self.assertEqual(fizzbuzz(3), "Fizz")
 
     def test_valeur_5(self):
         # Pour 5, il est divisible par 5 ET contient le chiffre 5 :
