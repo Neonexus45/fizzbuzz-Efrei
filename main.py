@@ -8,6 +8,8 @@ def fizzbuzz(i):
     :return: None
     """
     result = ""
+    
+    # Si le nombre est divisible par 3 et 5
     if i % 3 == 0 and i % 5 == 0:
         result = "FizzBuzz"
     elif i % 3 == 0:
@@ -17,25 +19,16 @@ def fizzbuzz(i):
     else:
         result = str(i)
 
+    # Si le nombre contient un 3, ajouter "Fizz"
     if "3" in str(i):
         result += "Fizz"
-    if "5" in str(i):
+    
+    # Si le nombre contient un 5, ajouter "Buzz"
+    if "5" in str(i) and "Buzz" not in result:  # Vérifier que "Buzz" n'est pas déjà dans result
         result += "Buzz"
 
     print(result)
 
-
-def main():
-    """
-    main function to test fizzbuzz
-    :return:
-    """
-    for i in range(1, 100):
-        fizzbuzz(i)
-
-    fizzbuzz(53)
-    fizzbuzz(35)
-
-
-if __name__ == "__main__":
-    main()
+# Tester les nombres de 1 à 100
+for i in range(1, 101):
+    fizzbuzz(i)
